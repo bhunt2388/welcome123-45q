@@ -3,672 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome 123 1 LLC — Section 45Q Carbon Tax Credit Opportunity</title>
+<title>Welcome 123 1 LLC — §45Q Carbon Tax Credit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --navy: #0e1c37;
-    --navy2: #152843;
-    --steel: #3c648c;
-    --cream: #f0ece9;
-    --white: #ffffff;
-    --green: #2e7d47;
-    --green-light: #d4edda;
-    --gold: #c8a84b;
-    --border: rgba(255,255,255,0.1);
-    --text-muted: rgba(255,255,255,0.6);
-    --sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-    --mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-  }
+:root {
+  --ink:#0c0c09; --surface:#141410; --card:#1b1b16; --card2:#222219;
+  --bdr:rgba(196,160,36,0.13); --bdr-s:rgba(196,160,36,0.36);
+  --gold:#C4A024; --gold-l:#D4B848; --gold-w:rgba(196,160,36,0.08);
+  --cream:#f0ebe0; --c70:rgba(240,235,224,0.70); --c45:rgba(240,235,224,0.44);
+  --c18:rgba(240,235,224,0.11); --grn:#4E9E6C; --rule:rgba(240,235,224,0.06);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --mono:'JetBrains Mono','Courier New',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);-webkit-font-smoothing:antialiased;min-height:100vh;}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:26px 64px;border-bottom:1px solid var(--bdr);}
+.logo-wordmark{font-family:var(--serif);font-size:20px;font-weight:700;font-style:italic;color:var(--cream);letter-spacing:0.01em;}
+.logo-sub{font-size:9.5px;letter-spacing:0.18em;color:var(--c45);text-transform:uppercase;margin-top:4px;}
+.header-badge{font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;padding:5px 13px;border:1px solid var(--bdr-s);border-radius:2px;color:var(--c45);}
 
-  body {
-    background: var(--navy);
-    color: var(--white);
-    font-family: var(--sans);
-    -webkit-font-smoothing: antialiased;
-    min-height: 100vh;
-  }
+.hero{padding:86px 64px 60px;max-width:1000px;}
+.hero-eyebrow{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--gold);}
+.hero h1{font-family:var(--serif);font-size:clamp(40px,5.5vw,68px);font-weight:700;line-height:1.06;letter-spacing:-0.02em;margin-bottom:28px;}
+.hero h1 em{font-style:italic;color:var(--gold);}
+.hero-lead{font-size:17px;line-height:1.72;color:var(--c70);max-width:700px;margin-bottom:52px;}
+.hero-lead strong{color:var(--cream);font-weight:600;}
+.hero-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:3px;overflow:hidden;max-width:840px;}
+.metric-cell{background:var(--card);padding:28px 24px;border-top:2px solid var(--gold-w);}
+.metric-cell.accent{border-top-color:var(--gold);}
+.metric-val{font-family:var(--serif);font-size:38px;font-weight:700;color:var(--cream);line-height:1;}
+.metric-val.grn{color:var(--grn);}
+.metric-label{font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--c45);line-height:1.5;margin-top:8px;}
 
-  /* HEADER */
-  .site-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 28px 60px;
-    border-bottom: 1px solid var(--border);
-  }
-  .logo-block { display: flex; flex-direction: column; gap: 2px; }
-  .logo-name {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-  .logo-sub {
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    color: var(--text-muted);
-    text-transform: uppercase;
-  }
-  .header-badge {
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 6px 14px;
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 3px;
-    color: var(--text-muted);
-  }
+.section{padding:70px 64px;border-top:1px solid var(--rule);}
+.section-eyebrow{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.section-title{font-family:var(--serif);font-size:clamp(26px,3.5vw,42px);font-weight:700;line-height:1.12;letter-spacing:-0.01em;margin-bottom:40px;}
 
-  /* HERO */
-  .hero {
-    padding: 90px 60px 70px;
-    max-width: 900px;
-  }
-  .hero-tag {
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--steel);
-    margin-bottom: 22px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .hero-tag::before {
-    content: '';
-    display: block;
-    width: 30px;
-    height: 1px;
-    background: var(--steel);
-  }
-  .hero h1 {
-    font-size: clamp(38px, 5vw, 64px);
-    font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin-bottom: 28px;
-  }
-  .hero h1 span { color: var(--steel); }
-  .hero-lead {
-    font-size: 18px;
-    line-height: 1.65;
-    color: rgba(255,255,255,0.75);
-    max-width: 720px;
-    margin-bottom: 48px;
-  }
-  .hero-metrics {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    overflow: hidden;
-    max-width: 820px;
-  }
-  .metric-cell {
-    background: var(--navy2);
-    padding: 28px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .metric-val {
-    font-size: 36px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    color: var(--white);
-    font-family: var(--sans);
-  }
-  .metric-val.green { color: #5cb878; }
-  .metric-label {
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    line-height: 1.4;
-  }
+.callout{background:var(--card);border:1px solid var(--bdr-s);border-left:3px solid var(--gold);border-radius:3px;padding:36px 44px;margin:0 64px 70px;}
+.callout-label{font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.callout-body{font-size:17px;line-height:1.72;color:var(--c70);}
+.callout-body strong{color:var(--grn);font-weight:600;}
 
-  /* SECTION WRAPPER */
-  .section {
-    padding: 70px 60px;
-    border-top: 1px solid var(--border);
-  }
-  .section-tag {
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--steel);
-    margin-bottom: 12px;
-  }
-  .section-title {
-    font-size: clamp(26px, 3.5vw, 40px);
-    font-weight: 700;
-    letter-spacing: -0.015em;
-    line-height: 1.15;
-    margin-bottom: 40px;
-  }
+.vintage-banner{background:linear-gradient(135deg,#0c2016 0%,#081510 100%);border:1px solid rgba(78,158,108,0.28);border-radius:3px;padding:40px 52px;margin:0 64px 70px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
+.vintage-title{font-family:var(--serif);font-size:21px;font-weight:700;color:#5cb87a;margin-bottom:10px;}
+.vintage-body{font-size:15px;line-height:1.72;color:rgba(240,235,224,0.72);}
+.vintage-body strong{color:var(--cream);}
+.vintage-badge{background:rgba(78,158,108,0.14);border:1px solid rgba(78,158,108,0.38);border-radius:3px;padding:22px 30px;text-align:center;min-width:140px;}
+.vintage-year{font-family:var(--serif);font-size:44px;font-weight:700;color:#5cb87a;line-height:1;}
+.vintage-badge-label{font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--c45);margin-top:6px;}
 
-  /* BOTTOM LINE CALLOUT */
-  .bottom-line {
-    background: linear-gradient(135deg, #1a3a5c 0%, var(--navy2) 100%);
-    border: 1px solid var(--steel);
-    border-radius: 8px;
-    padding: 36px 44px;
-    margin: 0 60px 70px;
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-  }
-  .bl-icon {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    background: var(--steel);
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-  }
-  .bl-text { flex: 1; }
-  .bl-label {
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-  }
-  .bl-body {
-    font-size: 17px;
-    line-height: 1.65;
-    color: rgba(255,255,255,0.9);
-  }
-  .bl-body strong { color: #5cb878; font-weight: 700; }
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:3px;overflow:hidden;}
+.step-card{background:var(--card);padding:32px 28px;}
+.step-num{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);font-family:var(--mono);margin-bottom:14px;}
+.step-title{font-family:var(--serif);font-size:16px;font-weight:700;line-height:1.35;margin-bottom:12px;color:var(--cream);}
+.step-body{font-size:13px;line-height:1.72;color:var(--c70);}
 
-  /* HOW IT WORKS */
-  .steps-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .step-card {
-    background: var(--navy2);
-    padding: 34px 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .step-num {
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--steel);
-    font-family: var(--mono);
-  }
-  .step-title {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.3;
-  }
-  .step-body {
-    font-size: 13.5px;
-    line-height: 1.65;
-    color: rgba(255,255,255,0.65);
-  }
+.irs-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;}
+.irs-chip{display:flex;align-items:center;gap:7px;padding:6px 12px;border:1px solid rgba(78,158,108,0.32);border-radius:2px;font-size:11px;color:#5cb87a;letter-spacing:0.04em;}
+.irs-dot{width:5px;height:5px;border-radius:50%;background:#5cb87a;flex-shrink:0;}
 
-  /* ECONOMICS TABLE */
-  .econ-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .econ-table thead tr {
-    background: var(--steel);
-  }
-  .econ-table thead th {
-    padding: 14px 22px;
-    text-align: left;
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-  .econ-table tbody tr {
-    border-bottom: 1px solid var(--border);
-  }
-  .econ-table tbody tr:last-child { border-bottom: none; }
-  .econ-table tbody tr:nth-child(odd) { background: var(--navy2); }
-  .econ-table tbody tr:nth-child(even) { background: rgba(21, 40, 67, 0.4); }
-  .econ-table tbody tr.total-row {
-    background: rgba(60, 100, 140, 0.25) !important;
-    border-top: 1px solid var(--steel);
-  }
-  .econ-table td {
-    padding: 14px 22px;
-    font-size: 14px;
-  }
-  .econ-table td:first-child { color: rgba(255,255,255,0.75); }
-  .econ-table td.val { font-family: var(--mono); font-size: 13px; text-align: right; }
-  .econ-table td.green { color: #5cb878; font-weight: 700; }
-  .econ-table td.highlight { color: var(--white); font-weight: 700; }
+.flow-steps{display:flex;border:1px solid var(--bdr);border-radius:3px;overflow:hidden;background:var(--bdr);gap:1px;}
+.flow-step{flex:1;background:var(--card);padding:30px 24px;}
+.flow-num{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--gold);margin-bottom:10px;}
+.flow-title{font-family:var(--serif);font-size:15px;font-weight:700;line-height:1.3;margin-bottom:10px;color:var(--cream);}
+.flow-body{font-size:12.5px;color:var(--c70);line-height:1.62;}
+.flow-amount{font-family:var(--mono);font-size:12px;color:var(--grn);font-weight:600;margin-top:8px;}
 
-  /* 2025 VINTAGE CALLOUT */
-  .vintage-banner {
-    background: linear-gradient(135deg, #1e4d2b 0%, #0e2f1a 100%);
-    border: 1px solid #2e7d47;
-    border-radius: 8px;
-    padding: 40px 48px;
-    margin: 0 60px;
-    margin-bottom: 70px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 40px;
-    align-items: center;
-  }
-  .vintage-title {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #5cb878;
-  }
-  .vintage-body {
-    font-size: 15px;
-    line-height: 1.7;
-    color: rgba(255,255,255,0.8);
-  }
-  .vintage-badge {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(46, 125, 71, 0.25);
-    border: 2px solid #2e7d47;
-    border-radius: 8px;
-    padding: 24px 32px;
-    text-align: center;
-    min-width: 160px;
-  }
-  .vintage-badge-year {
-    font-size: 40px;
-    font-weight: 800;
-    color: #5cb878;
-    line-height: 1;
-    font-family: var(--mono);
-  }
-  .vintage-badge-label {
-    font-size: 9.5px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
-    margin-top: 6px;
-  }
+.econ-table{width:100%;border-collapse:collapse;border:1px solid var(--bdr);border-radius:3px;overflow:hidden;}
+.econ-table thead tr{background:var(--gold);}
+.econ-table thead th{padding:13px 22px;text-align:left;font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;color:var(--ink);}
+.econ-table thead th:last-child{text-align:right;}
+.econ-table tbody tr{border-bottom:1px solid var(--rule);}
+.econ-table tbody tr:nth-child(odd){background:var(--card);}
+.econ-table tbody tr:nth-child(even){background:rgba(27,27,22,0.5);}
+.econ-table tbody tr.total-row{background:rgba(196,160,36,0.09)!important;border-top:1px solid var(--bdr-s);}
+.econ-table td{padding:14px 22px;font-size:14px;color:var(--c70);}
+.econ-table td.val{font-family:var(--mono);font-size:13px;text-align:right;}
+.econ-table td.hi{color:var(--cream);font-weight:600;}
+.econ-table td.pos{color:var(--grn);font-weight:700;}
 
-  /* PROTECTIONS GRID */
-  .protections-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-  .protection-card {
-    background: var(--navy2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 26px 28px;
-    display: flex;
-    gap: 18px;
-    align-items: flex-start;
-  }
-  .prot-icon {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    background: var(--steel);
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-  }
-  .prot-title {
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 7px;
-  }
-  .prot-body {
-    font-size: 13px;
-    line-height: 1.6;
-    color: rgba(255,255,255,0.65);
-  }
+.protections-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:3px;overflow:hidden;}
+.protection-card{background:var(--card);padding:28px 30px;}
+.prot-title{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--cream);margin-bottom:8px;}
+.prot-body{font-size:13px;line-height:1.65;color:var(--c70);}
 
-  /* LEGAL STRUCTURE */
-  .legal-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-  .legal-card {
-    background: var(--navy2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 26px 26px;
-  }
-  .legal-code {
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--steel);
-    margin-bottom: 8px;
-    font-family: var(--mono);
-  }
-  .legal-title { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
-  .legal-body { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.65); }
+.legal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:3px;overflow:hidden;}
+.legal-card{background:var(--card);padding:28px 26px;}
+.legal-code{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;color:var(--gold);margin-bottom:8px;}
+.legal-title{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--cream);margin-bottom:10px;}
+.legal-body{font-size:13px;line-height:1.65;color:var(--c70);}
 
-  /* TRANSACTION FLOW */
-  .flow-steps {
-    display: flex;
-    gap: 0;
-    align-items: stretch;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .flow-step {
-    flex: 1;
-    background: var(--navy2);
-    padding: 30px 24px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .flow-step + .flow-step {
-    border-left: 1px solid var(--border);
-  }
-  .flow-step-num {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    color: var(--steel);
-  }
-  .flow-step-title {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.3;
-  }
-  .flow-step-body {
-    font-size: 12.5px;
-    color: rgba(255,255,255,0.6);
-    line-height: 1.55;
-  }
-  .flow-step-amount {
-    font-family: var(--mono);
-    font-size: 13px;
-    color: #5cb878;
-    font-weight: 600;
-    margin-top: 4px;
-  }
+.savings-intro{font-size:15px;line-height:1.72;color:var(--c70);max-width:820px;margin-bottom:32px;}
+.savings-intro strong{color:var(--cream);}
+.savings-table{width:100%;border-collapse:collapse;border:1px solid var(--bdr);border-radius:3px;overflow:hidden;margin-bottom:16px;}
+.savings-table thead tr{background:var(--gold);}
+.savings-table thead th{padding:13px 18px;text-align:right;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;color:var(--ink);white-space:nowrap;}
+.savings-table thead th:first-child{text-align:left;}
+.savings-table tbody tr{border-bottom:1px solid var(--rule);}
+.savings-table tbody tr:nth-child(odd){background:var(--card);}
+.savings-table tbody tr:nth-child(even){background:rgba(27,27,22,0.5);}
+.savings-table tbody tr.hl-row{background:rgba(78,158,108,0.11)!important;border-top:1px solid rgba(78,158,108,0.32);border-bottom:1px solid rgba(78,158,108,0.32);}
+.savings-table td{padding:13px 18px;font-size:13px;text-align:right;font-family:var(--mono);white-space:nowrap;color:var(--c70);}
+.savings-table td:first-child{text-align:left;font-family:var(--sans);font-weight:600;color:var(--cream);font-size:14px;}
+.savings-table td.pos{color:var(--grn);font-weight:700;}
+.savings-table td.hi{color:var(--cream);font-weight:700;}
+.s-chip{display:inline-block;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;padding:2px 8px;background:rgba(78,158,108,0.18);border:1px solid rgba(78,158,108,0.38);border-radius:2px;color:#5cb87a;margin-left:8px;font-family:var(--sans);vertical-align:middle;}
+.savings-note{font-size:11.5px;line-height:1.65;color:var(--c45);max-width:820px;}
+.savings-note strong{color:var(--c70);}
 
-  /* DISCLAIMER / FOOTER */
-  .footer {
-    padding: 40px 60px;
-    border-top: 1px solid var(--border);
-  }
-  .footer-disclaimer {
-    font-size: 11px;
-    line-height: 1.7;
-    color: rgba(255,255,255,0.4);
-    max-width: 900px;
-  }
-  .footer-entity {
-    font-size: 13px;
-    font-weight: 700;
-    color: rgba(255,255,255,0.6);
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
+/* SEVEN LAYERS */
+.layers-lede{font-size:16px;line-height:1.78;color:var(--c70);max-width:780px;margin-bottom:56px;}
+.layers-lede strong{color:var(--cream);}
+.layers-doc{border-top:1px solid var(--bdr-s);margin-bottom:52px;}
+.layer-item{display:grid;grid-template-columns:72px 1fr;padding:48px 0;border-bottom:1px solid var(--rule);}
+.layer-item:last-child{border-bottom:1px solid var(--bdr-s);}
+.layer-numeral{font-family:var(--serif);font-size:58px;font-weight:700;color:var(--gold);opacity:0.22;line-height:1;letter-spacing:-0.02em;user-select:none;}
+.layer-body{padding-left:36px;border-left:1px solid var(--bdr-s);}
+.layer-rule{width:30px;height:1.5px;background:var(--gold);margin-bottom:13px;}
+.layer-cat{font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-l);margin-bottom:11px;}
+.layer-h3{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--cream);line-height:1.32;margin-bottom:14px;}
+.layer-text{font-size:14px;line-height:1.8;color:var(--c70);}
+.layer-text strong{color:var(--cream);font-weight:600;}
+.layers-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:3px;overflow:hidden;}
+.ls-cell{background:var(--card);padding:30px 28px;border-top:2px solid var(--gold-w);}
+.ls-cell.accent{border-top-color:var(--gold);}
+.ls-tag{font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.ls-title{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--cream);line-height:1.35;margin-bottom:10px;}
+.ls-body{font-size:12.5px;line-height:1.65;color:var(--c70);}
 
-  /* IRS SEAL ROW */
-  .irs-row {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-  }
-  .irs-chip {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    padding: 7px 14px;
-    border: 1px solid rgba(92, 184, 120, 0.4);
-    border-radius: 3px;
-    font-size: 11.5px;
-    color: #5cb878;
-    letter-spacing: 0.05em;
-  }
-  .irs-chip svg { width: 13px; height: 13px; fill: #5cb878; }
+.footer{padding:44px 64px;border-top:1px solid var(--bdr);}
+.footer-entity{font-family:var(--serif);font-size:14px;font-style:italic;color:var(--c70);margin-bottom:10px;}
+.footer-disc{font-size:11px;line-height:1.72;color:var(--c45);max-width:920px;}
 
-  /* TAX SAVINGS TABLE */
-  .savings-intro {
-    font-size: 15px;
-    line-height: 1.7;
-    color: rgba(255,255,255,0.7);
-    max-width: 820px;
-    margin-bottom: 32px;
-  }
-  .savings-intro strong { color: var(--white); }
-  .savings-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 18px;
-  }
-  .savings-table thead tr { background: var(--steel); }
-  .savings-table thead th {
-    padding: 13px 18px;
-    text-align: right;
-    font-size: 10.5px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  .savings-table thead th:first-child { text-align: left; }
-  .savings-table tbody tr { border-bottom: 1px solid var(--border); }
-  .savings-table tbody tr:last-child { border-bottom: none; }
-  .savings-table tbody tr:nth-child(odd)  { background: var(--navy2); }
-  .savings-table tbody tr:nth-child(even) { background: rgba(21,40,67,0.4); }
-  .savings-table tbody tr.highlight-row   {
-    background: rgba(46,125,71,0.18) !important;
-    border-top: 1px solid rgba(46,125,71,0.5);
-    border-bottom: 1px solid rgba(46,125,71,0.5);
-  }
-  .savings-table td {
-    padding: 13px 18px;
-    font-size: 13.5px;
-    text-align: right;
-    font-family: var(--mono);
-    white-space: nowrap;
-  }
-  .savings-table td:first-child {
-    text-align: left;
-    font-family: var(--sans);
-    font-weight: 600;
-    color: var(--white);
-    font-size: 14px;
-  }
-  .savings-table td.dim  { color: rgba(255,255,255,0.55); font-size: 12.5px; }
-  .savings-table td.pos  { color: #5cb878; font-weight: 700; }
-  .savings-table td.pct  { color: #5cb878; font-weight: 700; }
-  .savings-table td.this { color: var(--white); font-weight: 700; }
-  .savings-chip {
-    display: inline-block;
-    font-size: 9.5px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    background: rgba(46,125,71,0.25);
-    border: 1px solid rgba(46,125,71,0.5);
-    border-radius: 3px;
-    color: #5cb878;
-    margin-left: 10px;
-    vertical-align: middle;
-    font-family: var(--sans);
-  }
-  .savings-note {
-    font-size: 11.5px;
-    line-height: 1.65;
-    color: rgba(255,255,255,0.45);
-    max-width: 820px;
-  }
-  .savings-note strong { color: rgba(255,255,255,0.65); }
-
-  /* IRS COMPLIANCE SHIELD SECTION */
-  .shield-intro {
-    font-size: 15px;
-    line-height: 1.7;
-    color: rgba(255,255,255,0.7);
-    max-width: 820px;
-    margin-bottom: 36px;
-  }
-  .shield-intro strong { color: var(--white); }
-  .shield-layers {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 28px;
-  }
-  .shield-layer {
-    display: grid;
-    grid-template-columns: 56px 220px 1fr;
-    gap: 0;
-    border-bottom: 1px solid var(--border);
-    align-items: stretch;
-  }
-  .shield-layer:last-child { border-bottom: none; }
-  .shield-layer-num {
-    background: var(--steel);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--mono);
-    font-size: 14px;
-    font-weight: 700;
-    color: rgba(255,255,255,0.9);
-    padding: 24px 0;
-  }
-  .shield-layer-label {
-    background: rgba(60,100,140,0.2);
-    padding: 22px 24px;
-    display: flex;
-    align-items: center;
-    border-left: 1px solid var(--border);
-    border-right: 1px solid var(--border);
-  }
-  .shield-layer-label-inner {
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1.4;
-  }
-  .shield-layer-body {
-    background: var(--navy2);
-    padding: 22px 28px;
-    font-size: 13px;
-    line-height: 1.65;
-    color: rgba(255,255,255,0.65);
-    display: flex;
-    align-items: center;
-  }
-  .shield-layer-body strong { color: rgba(255,255,255,0.88); }
-  .shield-summary {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .shield-sum-cell {
-    background: var(--navy2);
-    padding: 26px 26px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .shield-sum-tag {
-    font-size: 9.5px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--steel);
-    font-family: var(--mono);
-  }
-  .shield-sum-title { font-size: 15px; font-weight: 700; line-height: 1.3; }
-  .shield-sum-body { font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.6); }
-
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .site-header { padding: 20px 24px; }
-    .hero, .section { padding: 50px 24px; }
-    .bottom-line, .vintage-banner { margin: 0 24px 50px; padding: 28px 24px; }
-    .hero-metrics { grid-template-columns: repeat(2, 1fr); }
-    .steps-grid, .legal-grid { grid-template-columns: 1fr; }
-    .protections-grid { grid-template-columns: 1fr; }
-    .flow-steps { flex-direction: column; }
-    .flow-step + .flow-step { border-left: none; border-top: 1px solid var(--border); }
-    .vintage-banner { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 32px; }
-    .footer { padding: 36px 24px; }
-    .shield-layer { grid-template-columns: 40px 1fr; }
-    .shield-layer-label { display: none; }
-    .shield-layer-num { font-size: 12px; }
-    .shield-summary { grid-template-columns: 1fr; }
-    .savings-table { font-size: 11px; }
-    .savings-table td, .savings-table thead th { padding: 10px 10px; }
-  }
+@media(max-width:900px){
+  .site-header,.hero,.section,.footer{padding-left:24px;padding-right:24px;}
+  .callout,.vintage-banner{margin-left:24px;margin-right:24px;padding:28px 24px;}
+  .hero-metrics{grid-template-columns:repeat(2,1fr);}
+  .steps-grid,.legal-grid,.layers-summary{grid-template-columns:1fr;}
+  .protections-grid{grid-template-columns:1fr;}
+  .flow-steps{flex-direction:column;}
+  .vintage-banner{grid-template-columns:1fr;}
+  .hero h1{font-size:32px;}
+  .layer-item{grid-template-columns:48px 1fr;}
+  .layer-numeral{font-size:38px;}
+  .layer-body{padding-left:20px;}
+}
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
-  <div class="logo-block">
-    <div class="logo-name">Welcome 123 1 LLC</div>
+  <div>
+    <div class="logo-wordmark">Welcome 123 1 LLC</div>
     <div class="logo-sub">Section 45Q Carbon Tax Credit Opportunity</div>
   </div>
-  <div class="header-badge">Confidential — Advisor Use Only</div>
+  <div class="header-badge">Confidential &mdash; Advisor Use Only</div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-tag">Section 45Q — Carbon Oxide Sequestration Credits</div>
-  <h1>Buy a dollar of federal<br>tax credit for <span>85 cents.</span></h1>
+  <div class="hero-eyebrow">Section 45Q &mdash; Carbon Oxide Sequestration Credits</div>
+  <h1>A dollar of federal tax credit<br>acquired for <em>eighty-five cents.</em></h1>
   <p class="hero-lead">
-    Welcome 123 1 LLC holds the exclusive contractual right to purchase $30,000,000
-    in IRS-approved Section 45Q carbon tax credits — 2025 vintage — and is
-    assigning that right to qualified buyers. Credits offset federal income tax
-    dollar-for-dollar. Total buyer all-in cost: <strong>$25.5M</strong> for
-    <strong>$30M</strong> in credits.
+    Welcome 123 1 LLC holds the exclusive contractual right to purchase
+    <strong>$30,000,000 face value</strong> of IRS-approved Section 45Q carbon
+    tax credits &mdash; 2025 vintage &mdash; and is assigning that right to qualified buyers.
+    Credits offset federal income tax dollar-for-dollar. Buyer all-in cost:
+    <strong>$25,500,000</strong> for <strong>$30,000,000</strong> in credits.
   </p>
-
   <div class="hero-metrics">
-    <div class="metric-cell">
+    <div class="metric-cell accent">
       <div class="metric-val">$30M</div>
       <div class="metric-label">Face Value<br>Section 45Q Credits</div>
     </div>
@@ -677,8 +185,8 @@
       <div class="metric-label">Effective Cost Per<br>Dollar of Credit</div>
     </div>
     <div class="metric-cell">
-      <div class="metric-val green">$4.5M</div>
-      <div class="metric-label">Net Benefit<br>to Buyer</div>
+      <div class="metric-val grn">$4.5M</div>
+      <div class="metric-label">Net Economic<br>Benefit to Buyer</div>
     </div>
     <div class="metric-cell">
       <div class="metric-val">2025</div>
@@ -687,546 +195,348 @@
   </div>
 </section>
 
-<!-- BOTTOM LINE -->
-<div class="bottom-line">
-  <div class="bl-icon">💡</div>
-  <div class="bl-text">
-    <div class="bl-label">The Bottom Line</div>
-    <div class="bl-body">
-      A taxpayer owing <strong>$30M in federal tax</strong> purchases $30M of Section 45Q credits for
-      <strong>$25.5M all-in</strong> — eliminating the entire tax liability and generating
-      a <strong>net economic benefit of $4.5M</strong>. That is 15% savings on a dollar-for-dollar
-      federal tax offset. Fully statutory. No equity. No K-1s. No project ownership.
-    </div>
+<div class="callout">
+  <div class="callout-label">The Fundamental Proposition</div>
+  <div class="callout-body">
+    A taxpayer with <strong>$30,000,000 in 2025 federal income tax liability</strong>
+    acquires $30M of Section 45Q credits for <strong>$25,500,000 all-in</strong> &mdash;
+    eliminating the entire liability and realizing a
+    <strong>net economic benefit of $4,500,000</strong>.
+    Fifteen percent savings on a dollar-for-dollar federal tax offset.
+    No equity. No K-1s. No project ownership. No basis risk.
   </div>
 </div>
 
-<!-- 2025 VINTAGE BANNER -->
 <div class="vintage-banner">
   <div>
-    <div class="vintage-title">2025 Vintage — Apply Against Your 2025 Federal Tax Return</div>
+    <div class="vintage-title">2025 Vintage &mdash; Applicable to Your 2025 Federal Return</div>
     <div class="vintage-body">
-      These are <strong>2025 vintage credits</strong> — meaning they are applicable to tax year 2025.
-      CPAs and financial advisors: your clients can use these credits on their 2025 federal income
-      tax return, filed in 2026, to offset current-year tax liability dollar-for-dollar.
-      Under IRC §6418, the transfer election is made on the buyer's tax return — no complex
-      structure, no equity investment, no passive activity concerns.
+      These are <strong>2025 vintage credits</strong> applicable to tax year 2025, filed in 2026.
+      Under IRC &sect;6418, the transfer election is made directly on the buyer&rsquo;s federal income
+      tax return using Form 3800. No complex vehicle, no equity investment, no passive activity
+      concerns. The buyer&rsquo;s CPA reports the transaction in a single line item with
+      the Credit Holder&rsquo;s IRS pre-filing registration number.
     </div>
   </div>
   <div class="vintage-badge">
-    <div class="vintage-badge-year">2025</div>
+    <div class="vintage-year">2025</div>
     <div class="vintage-badge-label">Tax Year<br>Applicable</div>
   </div>
 </div>
 
-<!-- HOW IT WORKS -->
 <section class="section">
-  <div class="section-tag">Mechanics</div>
+  <div class="section-eyebrow">Mechanics</div>
   <div class="section-title">How Section 45Q Credit Transfers Work</div>
-
   <div class="irs-row">
-    <div class="irs-chip">
-      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm-1 15l-4-4 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
-      IRS Pre-Filing Registration Required
-    </div>
-    <div class="irs-chip">
-      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm-1 15l-4-4 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
-      IRC §6418 Transfer Election
-    </div>
-    <div class="irs-chip">
-      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm-1 15l-4-4 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
-      Active Credit — §38 General Business Credit
-    </div>
-    <div class="irs-chip">
-      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm-1 15l-4-4 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
-      No Passive Activity Limits (§469 Does Not Apply)
-    </div>
+    <div class="irs-chip"><span class="irs-dot"></span> IRS Pre-Filing Registration Required</div>
+    <div class="irs-chip"><span class="irs-dot"></span> IRC &sect;6418 Transfer Election</div>
+    <div class="irs-chip"><span class="irs-dot"></span> Active Credit &mdash; &sect;38 General Business Credit</div>
+    <div class="irs-chip"><span class="irs-dot"></span> No Passive Activity Limits (&sect;469 Does Not Apply)</div>
   </div>
-
   <div class="steps-grid">
     <div class="step-card">
-      <div class="step-num">STEP 01 — ORIGIN</div>
+      <div class="step-num">Step 01 &mdash; Origin</div>
       <div class="step-title">Carbon is captured and permanently stored underground</div>
-      <div class="step-body">
-        Industrial facilities capture CO₂ emissions — or agricultural operations convert biomass
-        to biochar via pyrolysis, locking carbon in soil for centuries. Deep soil sampling
-        and continuous monitoring verify permanent storage.
-      </div>
+      <div class="step-body">Industrial facilities capture CO&sup2; emissions or agricultural operations convert biomass to biochar via pyrolysis, locking carbon in soil for centuries. Deep soil sampling to 60 feet with continuous monitoring verifies permanent storage.</div>
     </div>
     <div class="step-card">
-      <div class="step-num">STEP 02 — ISSUANCE</div>
-      <div class="step-title">Federal government issues Section 45Q credits to the project owner</div>
-      <div class="step-body">
-        For every metric ton of CO₂ permanently sequestered, the IRS issues Section 45Q
-        credits to the project owner. Credits have a fixed dollar face value — $30M
-        in this transaction. The project owner must materially participate,
-        generating an active (not passive) tax credit.
-      </div>
+      <div class="step-num">Step 02 &mdash; Issuance</div>
+      <div class="step-title">Federal government issues 45Q credits to the project owner</div>
+      <div class="step-body">For every metric ton of CO&sup2; permanently sequestered, credits are issued to the project owner at a fixed dollar face value. The project owner must materially participate, generating an active &mdash; not passive &mdash; federal tax credit.</div>
     </div>
     <div class="step-card">
-      <div class="step-num">STEP 03 — TRANSFER</div>
-      <div class="step-title">Owner transfers credits to buyer for cash under §6418</div>
-      <div class="step-body">
-        The Inflation Reduction Act created §6418, allowing project owners to elect
-        to transfer federal tax credits to unrelated third parties for cash.
-        The buyer receives the credits and applies them to their federal income
-        tax return — dollar-for-dollar offset. Clean transfer. No equity. No K-1.
-      </div>
+      <div class="step-num">Step 03 &mdash; Transfer</div>
+      <div class="step-title">Owner transfers credits to the buyer for cash under &sect;6418</div>
+      <div class="step-body">The Inflation Reduction Act of 2022 expressly permits project owners to elect to transfer federal tax credits to unrelated taxpayers for cash. Buyer receives credits and applies them dollar-for-dollar against federal income tax. No equity. No K-1.</div>
     </div>
   </div>
 </section>
 
-<!-- TRANSACTION FLOW -->
-<section class="section" style="padding-top: 0;">
-  <div class="section-tag">This Transaction</div>
-  <div class="section-title">How the Credit Purchase Right Assignment Works</div>
-
+<section class="section">
+  <div class="section-eyebrow">This Transaction</div>
+  <div class="section-title">How the Purchase Right Assignment Works</div>
   <div class="flow-steps">
     <div class="flow-step">
-      <div class="flow-step-num">PARTY A</div>
-      <div class="flow-step-title">Credit Holder</div>
-      <div class="flow-step-body">
-        Owns the $30M in Section 45Q credits. Has IRS pre-filing registration.
-        Handles all §6418 transfer election mechanics, IRS filings, and tax reporting.
-      </div>
+      <div class="flow-num">Party A</div>
+      <div class="flow-title">The Credit Holder</div>
+      <div class="flow-body">Owns $30M in IRS-registered Section 45Q credits. Holds IRS pre-filing registration. Handles all &sect;6418 transfer election mechanics, IRS filings, and tax reporting directly with the buyer.</div>
     </div>
     <div class="flow-step">
-      <div class="flow-step-num">PARTY B</div>
-      <div class="flow-step-title">Welcome 123 1 LLC</div>
-      <div class="flow-step-body">
-        Holds the exclusive contractual right to purchase the credits from the
-        Credit Holder at $21M under the Master Purchase Agreement. Assigns
-        that purchase right to the buyer.
-      </div>
-      <div class="flow-step-amount">Assignment Fee: $4,500,000</div>
+      <div class="flow-num">Party B</div>
+      <div class="flow-title">Welcome 123 1 LLC</div>
+      <div class="flow-body">Holds the exclusive contractual right to purchase the credits from the Credit Holder at $21M under the Master Purchase Agreement. Assigns that right to the buyer for an assignment fee.</div>
+      <div class="flow-amount">Assignment Fee &mdash; $4,500,000</div>
     </div>
     <div class="flow-step">
-      <div class="flow-step-num">PARTY C</div>
-      <div class="flow-step-title">Buyer (Assignee)</div>
-      <div class="flow-step-body">
-        Pays $4.5M to Welcome 123 1 LLC for the purchase right, then pays
-        $21M directly to the Credit Holder to acquire $30M face value of
-        Section 45Q credits.
-      </div>
-      <div class="flow-step-amount">All-In Cost: $25,500,000 → $30M credits</div>
+      <div class="flow-num">Party C</div>
+      <div class="flow-title">The Buyer (Assignee)</div>
+      <div class="flow-body">Pays $4.5M to Welcome 123 1 LLC for the purchase right, then pays $21M directly to the Credit Holder to acquire $30M face value of Section 45Q credits for use on the 2025 return.</div>
+      <div class="flow-amount">All-In Cost &mdash; $25,500,000</div>
     </div>
   </div>
 </section>
 
-<!-- ECONOMICS TABLE -->
-<section class="section" style="padding-top: 0;">
-  <div class="section-tag">Economics</div>
-  <div class="section-title">Transaction Economics for the Buyer</div>
-
+<section class="section">
+  <div class="section-eyebrow">Transaction Economics</div>
+  <div class="section-title">Cost &amp; Benefit Summary</div>
   <table class="econ-table">
-    <thead>
-      <tr>
-        <th>Line Item</th>
-        <th style="text-align:right">Amount</th>
-      </tr>
-    </thead>
+    <thead><tr><th>Line Item</th><th>Amount</th></tr></thead>
     <tbody>
-      <tr>
-        <td>Assignment Fee (paid to Welcome 123 1 LLC)</td>
-        <td class="val">$4,500,000</td>
-      </tr>
-      <tr>
-        <td>Credit Purchase Price (paid directly to Credit Holder)</td>
-        <td class="val">$21,000,000</td>
-      </tr>
-      <tr class="total-row">
-        <td class="highlight">Total Buyer All-In Cost</td>
-        <td class="val highlight">$25,500,000</td>
-      </tr>
-      <tr>
-        <td>Face Value of Section 45Q Credits Received</td>
-        <td class="val">$30,000,000</td>
-      </tr>
-      <tr>
-        <td>Dollar-for-Dollar Federal Tax Offset</td>
-        <td class="val">$30,000,000</td>
-      </tr>
-      <tr class="total-row">
-        <td class="highlight">Net Economic Benefit to Buyer</td>
-        <td class="val green">+$4,500,000</td>
-      </tr>
-      <tr>
-        <td>Effective Cost Per Dollar of Tax Credit</td>
-        <td class="val">$0.85</td>
-      </tr>
-      <tr>
-        <td>Discount to Face Value</td>
-        <td class="val green">15%</td>
-      </tr>
+      <tr><td>Assignment Fee (paid to Welcome 123 1 LLC)</td><td class="val">$4,500,000</td></tr>
+      <tr><td>Credit Purchase Price (paid directly to Credit Holder)</td><td class="val">$21,000,000</td></tr>
+      <tr class="total-row"><td class="hi">Total Buyer All-In Cost</td><td class="val hi">$25,500,000</td></tr>
+      <tr><td>Face Value of Section 45Q Credits Received</td><td class="val">$30,000,000</td></tr>
+      <tr><td>Dollar-for-Dollar Federal Tax Offset</td><td class="val">$30,000,000</td></tr>
+      <tr class="total-row"><td class="hi">Net Economic Benefit to Buyer</td><td class="val pos">+$4,500,000</td></tr>
+      <tr><td>Effective Cost Per Dollar of Tax Credit</td><td class="val">$0.85</td></tr>
+      <tr><td>All-In Discount to Face Value</td><td class="val pos">15%</td></tr>
     </tbody>
   </table>
 </section>
 
-<!-- BUYER PROTECTIONS -->
 <section class="section">
-  <div class="section-tag">Risk Mitigation</div>
-  <div class="section-title">Buyer Protections &amp; Safeguards</div>
-
-  <div class="protections-grid">
-    <div class="protection-card">
-      <div class="prot-icon">🔁</div>
-      <div>
-        <div class="prot-title">3× Redundancy Reserve</div>
-        <div class="prot-body">Triple redundancy reserves back every credit transaction. Credit Holder maintains excess capacity beyond the face value of credits transferred.</div>
-      </div>
-    </div>
-    <div class="protection-card">
-      <div class="prot-icon">🛡</div>
-      <div>
-        <div class="prot-title">100% Seller Indemnity</div>
-        <div class="prot-body">Credit Holder bears full responsibility for any pre-transfer recapture or compliance failures. Liability does not pass to the buyer.</div>
-      </div>
-    </div>
-    <div class="protection-card">
-      <div class="prot-icon">↩</div>
-      <div>
-        <div class="prot-title">Replace or Refund Guarantee</div>
-        <div class="prot-body">Any invalidated credits are replaced with equivalent type and vintage credits — or buyer receives a full refund. No exposure to stale or disqualified credits.</div>
-      </div>
-    </div>
-    <div class="protection-card">
-      <div class="prot-icon">📋</div>
-      <div>
-        <div class="prot-title">Annual Third-Party Audit &amp; IRS Cooperation</div>
-        <div class="prot-body">Annual independent audits validate carbon capture and storage. Credit Holder provides full documentation for any IRS examination or inquiry.</div>
-      </div>
-    </div>
-    <div class="protection-card">
-      <div class="prot-icon">🔬</div>
-      <div>
-        <div class="prot-title">Verified Carbon Storage</div>
-        <div class="prot-body">Lifecycle analysis, third-party validation, and continuous MRV (monitoring, reporting, verification) monitoring confirm every credit unit represents real CO₂ permanently removed.</div>
-      </div>
-    </div>
-    <div class="protection-card">
-      <div class="prot-icon">💰</div>
-      <div>
-        <div class="prot-title">Fixed Cash — No Profit Sharing or Project Linkage</div>
-        <div class="prot-body">Structural separation: fixed cash consideration only. Buyer has no equity, no project ownership, no ongoing profit-sharing obligation, and no exposure to project operational risk.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LEGAL STRUCTURE -->
-<section class="section">
-  <div class="section-tag">Legal &amp; Tax Framework</div>
-  <div class="section-title">Why Buyers Accept These Credits with Confidence</div>
-
-  <div class="legal-grid">
-    <div class="legal-card">
-      <div class="legal-code">IRC §45Q</div>
-      <div class="legal-title">Statutory Basis</div>
-      <div class="legal-body">Section 45Q is codified federal law incentivizing carbon capture and permanent sequestration. Credits have direct Internal Revenue Code authority — not a structure, opinion, or strategy.</div>
-    </div>
-    <div class="legal-card">
-      <div class="legal-code">IRC §6418</div>
-      <div class="legal-title">Clean Transfer Election</div>
-      <div class="legal-body">The Inflation Reduction Act expressly permits project owners to transfer credits to unrelated taxpayers for cash. No equity. No K-1. No project ownership. Buyer receives a standalone tax attribute.</div>
-    </div>
-    <div class="legal-card">
-      <div class="legal-code">IRC §38 / §469</div>
-      <div class="legal-title">Active Credit — No Passive Limits</div>
-      <div class="legal-body">45Q credits used via §6418 election apply under the General Business Credit (§38). IRC §469 passive activity rules do not apply — credits offset active income with no carryforward risk from passive limitations.</div>
-    </div>
-    <div class="legal-card">
-      <div class="legal-code">IRS APPROVED</div>
-      <div class="legal-title">Pre-Filing Registration</div>
-      <div class="legal-body">Credit Holder has obtained IRS pre-filing registration confirming the credits exist and are eligible for transfer. Registration number disclosed to buyer as part of the Credit Holder representation.</div>
-    </div>
-    <div class="legal-card">
-      <div class="legal-code">$38(c)</div>
-      <div class="legal-title">Tax Capacity Consideration</div>
-      <div class="legal-body">The §38(c) general business credit limitation may restrict a buyer's ability to utilize the full $30M in a single year. Buyers must confirm their federal tax liability with their CPA before closing.</div>
-    </div>
-    <div class="legal-card">
-      <div class="legal-code">STRUCTURE</div>
-      <div class="legal-title">What Welcome 123 1 LLC Is (and Is Not)</div>
-      <div class="legal-body">Welcome 123 1 LLC assigns a contractual purchase right only. It is not a broker-dealer, does not transfer tax credits directly, and does not issue Schedule K-1 forms. All credit mechanics are handled by the Credit Holder.</div>
-    </div>
-  </div>
-</section>
-
-<!-- DUE DILIGENCE / PROCESS -->
-<section class="section">
-  <div class="section-tag">Next Steps</div>
-  <div class="section-title">The Process for Qualified Buyers</div>
-
-  <div class="steps-grid">
-    <div class="step-card">
-      <div class="step-num">STEP 01 — NDA &amp; QUALIFICATION</div>
-      <div class="step-title">Confirm tax capacity and execute NDA</div>
-      <div class="step-body">
-        Buyer confirms with their CPA that they have sufficient 2025 federal income
-        tax liability to utilize up to $30M in credits. NDA executed to receive full
-        credit holder documentation and MPA details.
-      </div>
-    </div>
-    <div class="step-card">
-      <div class="step-num">STEP 02 — DUE DILIGENCE</div>
-      <div class="step-title">4-day review period</div>
-      <div class="step-body">
-        Buyer receives a redacted copy of the Master Purchase Agreement, Credit Holder
-        identity, IRS pre-filing registration number, and third-party audit reports.
-        Full termination right with escrow return during this period.
-      </div>
-    </div>
-    <div class="step-card">
-      <div class="step-num">STEP 03 — CLOSE</div>
-      <div class="step-title">Wire funds, receive Purchase Right and Credits</div>
-      <div class="step-body">
-        $4.5M assignment fee wired to Welcome 123 1 LLC. $21M wired directly to
-        Credit Holder. Purchase Right assigned. §6418 transfer election processed
-        directly between Buyer and Credit Holder. Credits applied to 2025 return.
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TAX SAVINGS TABLE -->
-<section class="section">
-  <div class="section-tag">Tax Savings Scenarios</div>
+  <div class="section-eyebrow">Tax Savings Scenarios</div>
   <div class="section-title">What This Credit Is Worth at Your Tax Liability</div>
-
   <p class="savings-intro">
-    These credits offset federal income tax <strong>dollar-for-dollar</strong> under IRC §38.
-    The table below shows the net economic savings across common buyer tax liability sizes,
-    all priced at the same <strong>$0.85 effective cost per dollar</strong> of credit.
-    Your CPA can right-size the credit amount to your exact 2025 federal tax position.
+    These credits offset federal income tax <strong>dollar-for-dollar</strong> under IRC &sect;38.
+    The table below shows net economic savings across common tax liability sizes,
+    all priced at <strong>$0.85 per dollar of credit</strong>. Partial amounts are available &mdash;
+    buyers are not required to purchase the full $30M block.
   </p>
-
   <table class="savings-table">
     <thead>
       <tr>
         <th>Buyer Federal Tax Liability</th>
         <th>Credits Purchased</th>
         <th>All-In Cost</th>
-        <th>Tax Eliminated</th>
+        <th>Tax Offset</th>
         <th>Net Savings</th>
         <th>Return on Cost</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>$1,000,000</td>
-        <td class="dim">$1,000,000</td>
-        <td class="dim">$850,000</td>
-        <td class="dim">$1,000,000</td>
-        <td class="pos">+$150,000</td>
-        <td class="pct">17.6%</td>
-      </tr>
-      <tr>
-        <td>$2,500,000</td>
-        <td class="dim">$2,500,000</td>
-        <td class="dim">$2,125,000</td>
-        <td class="dim">$2,500,000</td>
-        <td class="pos">+$375,000</td>
-        <td class="pct">17.6%</td>
-      </tr>
-      <tr>
-        <td>$5,000,000</td>
-        <td class="dim">$5,000,000</td>
-        <td class="dim">$4,250,000</td>
-        <td class="dim">$5,000,000</td>
-        <td class="pos">+$750,000</td>
-        <td class="pct">17.6%</td>
-      </tr>
-      <tr>
-        <td>$10,000,000</td>
-        <td class="dim">$10,000,000</td>
-        <td class="dim">$8,500,000</td>
-        <td class="dim">$10,000,000</td>
-        <td class="pos">+$1,500,000</td>
-        <td class="pct">17.6%</td>
-      </tr>
-      <tr>
-        <td>$15,000,000</td>
-        <td class="dim">$15,000,000</td>
-        <td class="dim">$12,750,000</td>
-        <td class="dim">$15,000,000</td>
-        <td class="pos">+$2,250,000</td>
-        <td class="pct">17.6%</td>
-      </tr>
-      <tr>
-        <td>$20,000,000</td>
-        <td class="dim">$20,000,000</td>
-        <td class="dim">$17,000,000</td>
-        <td class="dim">$20,000,000</td>
-        <td class="pos">+$3,000,000</td>
-        <td class="pct">17.6%</td>
-      </tr>
-      <tr class="highlight-row">
-        <td>$30,000,000 <span class="savings-chip">This Transaction</span></td>
-        <td class="this">$30,000,000</td>
-        <td class="this">$25,500,000</td>
-        <td class="this">$30,000,000</td>
-        <td class="pos">+$4,500,000</td>
-        <td class="pct">17.6%</td>
-      </tr>
+      <tr><td>$1,000,000</td><td>$1,000,000</td><td>$850,000</td><td>$1,000,000</td><td class="pos">+$150,000</td><td class="pos">17.6%</td></tr>
+      <tr><td>$2,500,000</td><td>$2,500,000</td><td>$2,125,000</td><td>$2,500,000</td><td class="pos">+$375,000</td><td class="pos">17.6%</td></tr>
+      <tr><td>$5,000,000</td><td>$5,000,000</td><td>$4,250,000</td><td>$5,000,000</td><td class="pos">+$750,000</td><td class="pos">17.6%</td></tr>
+      <tr><td>$10,000,000</td><td>$10,000,000</td><td>$8,500,000</td><td>$10,000,000</td><td class="pos">+$1,500,000</td><td class="pos">17.6%</td></tr>
+      <tr><td>$15,000,000</td><td>$15,000,000</td><td>$12,750,000</td><td>$15,000,000</td><td class="pos">+$2,250,000</td><td class="pos">17.6%</td></tr>
+      <tr><td>$20,000,000</td><td>$20,000,000</td><td>$17,000,000</td><td>$20,000,000</td><td class="pos">+$3,000,000</td><td class="pos">17.6%</td></tr>
+      <tr class="hl-row"><td>$30,000,000 <span class="s-chip">This Transaction</span></td><td class="hi">$30,000,000</td><td class="hi">$25,500,000</td><td class="hi">$30,000,000</td><td class="pos">+$4,500,000</td><td class="pos">17.6%</td></tr>
     </tbody>
   </table>
-
   <p class="savings-note">
-    <strong>How to read this table:</strong> "All-In Cost" = assignment fee + credit purchase price at $0.85/dollar.
-    "Tax Eliminated" = federal income tax liability offset dollar-for-dollar via §38 General Business Credit.
-    "Net Savings" = credits received minus all-in cost. "Return on Cost" = net savings ÷ all-in cost.
-    Partial credit amounts are available — buyers are not required to purchase the full $30M block.
-    The §38(c) limitation caps General Business Credits in a single year; buyers with tax liability under
-    ~$25M may need to carry forward unused credits. Confirm utilization capacity with your CPA before closing.
+    <strong>How to read this table:</strong> All-In Cost = assignment fee + credit purchase price at $0.85/dollar.
+    Net Savings = credits received minus all-in cost. Return on Cost = net savings &divide; all-in cost.
+    The &sect;38(c) general business credit limitation may restrict utilization above roughly $25M in a single year
+    depending on the buyer&rsquo;s regular tax liability. Buyers should confirm their specific tax capacity
+    with their CPA or tax advisor prior to closing.
   </p>
 </section>
 
-<!-- IRS COMPLIANCE & CREDIT INTEGRITY -->
 <section class="section">
-  <div class="section-tag">IRS Compliance &amp; Credit Integrity</div>
+  <div class="section-eyebrow">Risk Mitigation</div>
+  <div class="section-title">Buyer Protections &amp; Contractual Safeguards</div>
+  <div class="protections-grid">
+    <div class="protection-card">
+      <div class="prot-title">3&times; Redundancy Reserve</div>
+      <div class="prot-body">The Credit Holder maintains triple redundancy reserves exceeding the face value of credits transferred. Excess verified capacity is held specifically to cover any shortfall or challenge without impacting the buyer&rsquo;s position.</div>
+    </div>
+    <div class="protection-card">
+      <div class="prot-title">100% Seller Indemnification</div>
+      <div class="prot-body">The Credit Holder bears full contractual responsibility for any pre-transfer recapture event or compliance failure. All indemnification obligations run directly to the buyer. Liability does not pass through to the transferee.</div>
+    </div>
+    <div class="protection-card">
+      <div class="prot-title">Replace or Refund Guarantee</div>
+      <div class="prot-body">If any transferred credits are invalidated for any reason attributable to the Credit Holder, the buyer receives replacement credits of equivalent type and vintage or a full refund of amounts paid. No buyer exposure to stale or disqualified credits.</div>
+    </div>
+    <div class="protection-card">
+      <div class="prot-title">Annual Third-Party Audit &amp; IRS Cooperation</div>
+      <div class="prot-body">Annual independent audits validate the carbon capture operation and credit issuance process. Audit reports are available to buyers in due diligence. The Credit Holder commits to full documentation production for any IRS examination.</div>
+    </div>
+    <div class="protection-card">
+      <div class="prot-title">Continuous MRV Monitoring</div>
+      <div class="prot-body">Every credit unit is backed by independently verified CO&sup2; removed. Lifecycle analysis, third-party validation, and continuous monitoring, reporting, and verification protocols confirm permanent storage prior to credit issuance.</div>
+    </div>
+    <div class="protection-card">
+      <div class="prot-title">Structural Separation &mdash; Fixed Cash Only</div>
+      <div class="prot-body">The buyer acquires a standalone federal tax attribute for fixed cash consideration. No equity stake, no profit-sharing, no ongoing project exposure, no operational liability. The buyer&rsquo;s interest is fully defined at closing.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-eyebrow">Legal &amp; Tax Framework</div>
+  <div class="section-title">Statutory &amp; Structural Basis</div>
+  <div class="legal-grid">
+    <div class="legal-card">
+      <div class="legal-code">IRC &sect;45Q</div>
+      <div class="legal-title">Statutory Authority</div>
+      <div class="legal-body">Section 45Q is enacted federal law incentivizing carbon capture and permanent geological sequestration, enhanced by the Inflation Reduction Act of 2022. Credits carry direct Internal Revenue Code authority.</div>
+    </div>
+    <div class="legal-card">
+      <div class="legal-code">IRC &sect;6418</div>
+      <div class="legal-title">Clean Transfer Election</div>
+      <div class="legal-body">The IRA expressly permits project owners to transfer credits to unrelated taxpayers for cash. No equity. No K-1. No project ownership. The buyer receives a standalone tax attribute reported on Form 3800.</div>
+    </div>
+    <div class="legal-card">
+      <div class="legal-code">IRC &sect;38 / &sect;469</div>
+      <div class="legal-title">Active Credit Treatment</div>
+      <div class="legal-body">45Q credits transferred via &sect;6418 apply under the General Business Credit. Passive activity rules under &sect;469 do not apply. Credits offset active federal income tax liability with no passive limitation carryforward risk.</div>
+    </div>
+    <div class="legal-card">
+      <div class="legal-code">IRS Registration</div>
+      <div class="legal-title">Pre-Filing Registration</div>
+      <div class="legal-body">The Credit Holder has obtained IRS pre-filing registration via the IRS Energy Credits Online portal confirming the credits exist and are eligible for transfer. Registration number disclosed to buyer in due diligence.</div>
+    </div>
+    <div class="legal-card">
+      <div class="legal-code">&sect;38(c)</div>
+      <div class="legal-title">Tax Capacity Consideration</div>
+      <div class="legal-body">The &sect;38(c) limitation may cap General Business Credits in a single tax year. Buyers should confirm federal income tax liability and utilization capacity with their CPA prior to executing the Assignment Agreement.</div>
+    </div>
+    <div class="legal-card">
+      <div class="legal-code">Structure</div>
+      <div class="legal-title">What Welcome 123 1 LLC Is Not</div>
+      <div class="legal-body">Welcome 123 1 LLC assigns a contractual purchase right only. It is not a broker-dealer, does not transfer tax credits directly, and issues no Schedule K-1. All credit mechanics are handled solely by the Credit Holder.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-eyebrow">IRS Compliance &amp; Credit Integrity</div>
   <div class="section-title">Seven Layers of Protection Against IRS Scrutiny</div>
 
-  <p class="shield-intro">
-    The credit holder has built a <strong>multi-layer compliance architecture</strong> specifically designed
-    to withstand IRS examination. Every layer is independent — meaning no single point of failure can
-    invalidate the credits. This is not a tax strategy or opinion letter. It is a federally registered,
-    audited, and IRS-acknowledged credit program built on hard physical and legal foundations.
+  <p class="layers-lede">
+    The Credit Holder has constructed a <strong>multi-layered compliance architecture</strong>
+    designed to withstand IRS examination at every level. Each layer is independently sufficient.
+    No single point of failure can invalidate the credits. This is not a tax strategy, a
+    promoter opinion, or a listed transaction. It is a federally registered, independently
+    audited, IRS-acknowledged credit program built on physical and statutory foundations.
   </p>
 
-  <div class="shield-layers">
-    <div class="shield-layer">
-      <div class="shield-layer-num">01</div>
-      <div class="shield-layer-label"><div class="shield-layer-label-inner">IRS Pre-Filing Registration</div></div>
-      <div class="shield-layer-body">
-        Before any credit transfer, the Credit Holder obtains an <strong>IRS pre-filing registration number</strong>
-        via the IRS Energy Credits Online portal — a formal acknowledgment that the credits exist,
-        the project qualifies under §45Q, and the transfer is eligible under §6418.
-        Registration number is disclosed to the buyer in due diligence. No registration = no transfer.
-        This is the IRS's own gatekeeping step built into the Inflation Reduction Act.
+  <div class="layers-doc">
+
+    <div class="layer-item">
+      <div class="layer-numeral">I</div>
+      <div class="layer-body">
+        <div class="layer-rule"></div>
+        <div class="layer-cat">Federal Registration</div>
+        <div class="layer-h3">IRS Pre-Filing Registration via Energy Credits Online</div>
+        <div class="layer-text">Before any credit transfer, the Credit Holder obtains an <strong>IRS pre-filing registration number</strong> through the IRS Energy Credits Online portal &mdash; the federal government&rsquo;s own gatekeeping mechanism built into the Inflation Reduction Act. This registration is a formal acknowledgment by the IRS that the project qualifies under &sect;45Q, the credits exist in the stated quantity, and the transfer is eligible under &sect;6418. The registration number is disclosed on the buyer&rsquo;s tax return and is available to the buyer&rsquo;s CPA in due diligence. No registration means no transfer. This step cannot be fabricated or circumvented.</div>
       </div>
     </div>
-    <div class="shield-layer">
-      <div class="shield-layer-num">02</div>
-      <div class="shield-layer-label"><div class="shield-layer-label-inner">Statutory IRC §45Q Authority</div></div>
-      <div class="shield-layer-body">
-        Section 45Q is enacted federal law — not a regulation, not a ruling, not a tax strategy.
-        Congress passed §45Q specifically to incentivize carbon capture and permanent geological sequestration.
-        The credit was <strong>enhanced by the Inflation Reduction Act of 2022</strong> and is currently active law.
-        Credits issued under §45Q carry the same legal weight as any other provision of the Internal Revenue Code.
+
+    <div class="layer-item">
+      <div class="layer-numeral">II</div>
+      <div class="layer-body">
+        <div class="layer-rule"></div>
+        <div class="layer-cat">Enacted Federal Law</div>
+        <div class="layer-h3">Statutory Authority Under IRC &sect;45Q and the Inflation Reduction Act</div>
+        <div class="layer-text">Section 45Q is not a regulation, a private letter ruling, a tax planning strategy, or a promoter opinion. It is <strong>enacted federal law</strong>, passed by Congress and signed into law as part of the Inflation Reduction Act of 2022. The transfer mechanism under &sect;6418 is equally a Congressional creation. These credits carry the same legal authority as any other provision of the Internal Revenue Code. There is no judicial or administrative uncertainty about the existence or transferability of validly issued &sect;45Q credits. The statute is the protection.</div>
       </div>
     </div>
-    <div class="shield-layer">
-      <div class="shield-layer-num">03</div>
-      <div class="shield-layer-label"><div class="shield-layer-label-inner">Physical Verification &amp; MRV</div></div>
-      <div class="shield-layer-body">
-        Carbon sequestration is <strong>independently measured, reported, and verified (MRV)</strong> by a
-        qualified third-party validator. Deep soil sampling to 60 feet with continuous monitoring
-        confirms permanent storage. Credits are issued only for verified CO₂ removed — not estimated,
-        projected, or offset. Physical proof precedes every credit unit. This is the bedrock
-        of the program's defensibility: the CO₂ is provably in the ground.
+
+    <div class="layer-item">
+      <div class="layer-numeral">III</div>
+      <div class="layer-body">
+        <div class="layer-rule"></div>
+        <div class="layer-cat">Physical Proof of Sequestration</div>
+        <div class="layer-h3">Independent Measurement, Reporting &amp; Verification (MRV)</div>
+        <div class="layer-text">Every credit unit is backed by <strong>independently verified physical sequestration</strong>. Carbon capture and permanent storage is measured, reported, and verified by a qualified third-party MRV provider. Deep soil sampling to 60 feet with continuous subsurface monitoring confirms that CO&sup2; is permanently in the ground before a single credit is issued. Credits are issued only for verified removals &mdash; not estimated, projected, or modeled. This physical foundation is the most defensible position in any &sect;45Q examination: the CO&sup2; is measurably, provably present in the ground and the documentation chain is unbroken.</div>
       </div>
     </div>
-    <div class="shield-layer">
-      <div class="shield-layer-num">04</div>
-      <div class="shield-layer-label"><div class="shield-layer-label-inner">Annual Independent Audit</div></div>
-      <div class="shield-layer-body">
-        The Credit Holder undergoes <strong>annual third-party audits</strong> of the carbon capture operation,
-        credit issuance process, and compliance with §45Q requirements. Audit reports are available
-        to buyers during due diligence. Auditors verify measurement methodology, storage permanence,
-        and credit quantity. These reports constitute a formal contemporaneous record — exactly the
-        type of documentation the IRS requires in any §45Q examination.
+
+    <div class="layer-item">
+      <div class="layer-numeral">IV</div>
+      <div class="layer-body">
+        <div class="layer-rule"></div>
+        <div class="layer-cat">Independent Oversight</div>
+        <div class="layer-h3">Annual Third-Party Audit of the Credit Issuance Process</div>
+        <div class="layer-text">The Credit Holder undergoes <strong>annual independent audits</strong> of the carbon capture operation, credit quantity calculation, MRV methodology, and compliance with &sect;45Q requirements. Audit reports constitute formal contemporaneous documentation &mdash; the type the IRS specifically requires for examination of large credit programs. These reports are made available to buyers during the four-day due diligence period. The audit trail begins before the credit is issued and runs forward through transfer. The Credit Holder has no incentive to overstate credits: the triple redundancy reserve means adequately conservative issuance is structurally enforced.</div>
       </div>
     </div>
-    <div class="shield-layer">
-      <div class="shield-layer-num">05</div>
-      <div class="shield-layer-label"><div class="shield-layer-label-inner">Material Participation — Active Credits</div></div>
-      <div class="shield-layer-body">
-        The credit originator <strong>materially participates</strong> in the carbon capture project —
-        a critical structural requirement that causes these to be generated as <strong>active federal tax credits</strong>
-        under §38, not passive activity credits. This distinction matters enormously: passive credits
-        are subject to §469 limitations and carryforward rules that restrict their use.
-        Active §45Q credits transferred via §6418 face no such restriction and apply directly
-        against any federal income tax liability.
+
+    <div class="layer-item">
+      <div class="layer-numeral">V</div>
+      <div class="layer-body">
+        <div class="layer-rule"></div>
+        <div class="layer-cat">Active Credit Classification</div>
+        <div class="layer-h3">Material Participation Ensures Active &mdash; Not Passive &mdash; Credit Generation</div>
+        <div class="layer-text">The credit originator <strong>materially participates</strong> in the carbon capture project. This structural fact is critical: material participation is what causes the &sect;45Q credits to arise as <strong>active federal tax credits</strong> under &sect;38, not as passive activity credits subject to &sect;469 limitations. Passive credits face carryforward restrictions that substantially reduce their value and create ongoing compliance exposure for the buyer. Active credits transferred via &sect;6418 carry no such limitation and apply immediately and fully against any federal income tax liability in the year of transfer. This classification has been confirmed and is documented in the Credit Holder&rsquo;s records.</div>
       </div>
     </div>
-    <div class="shield-layer">
-      <div class="shield-layer-num">06</div>
-      <div class="shield-layer-label"><div class="shield-layer-label-inner">Seller Bears Recapture Risk</div></div>
-      <div class="shield-layer-body">
-        Under the §6418 transfer structure, <strong>recapture risk stays with the Credit Holder</strong>,
-        not the buyer. If the IRS were to determine a credit was miscalculated or ineligible
-        after transfer, the recapture obligation falls on the seller — not the transferee.
-        In addition, the Credit Holder contractually indemnifies the buyer against any
-        pre-transfer compliance failures. The buyer's exposure is limited to the purchase
-        price paid — not expanded by downstream audit risk.
+
+    <div class="layer-item">
+      <div class="layer-numeral">VI</div>
+      <div class="layer-body">
+        <div class="layer-rule"></div>
+        <div class="layer-cat">Risk Allocation</div>
+        <div class="layer-h3">Recapture Risk Remains With the Credit Holder by Statute and Contract</div>
+        <div class="layer-text">Under the &sect;6418 transfer structure, <strong>recapture risk remains with the Credit Holder</strong>, not the buyer. If any transferred credit were determined by the IRS to have been miscalculated or ineligible, the recapture obligation falls on the transferor &mdash; the selling entity &mdash; not the buyer. This statutory allocation is reinforced contractually: the Credit Holder indemnifies the buyer against any pre-transfer compliance failures. The buyer&rsquo;s maximum exposure is bounded by the purchase price paid. It is not expanded by audit risk, recapture, or downstream IRS determination. The buyer&rsquo;s risk envelope is definitionally closed at closing.</div>
       </div>
     </div>
-    <div class="shield-layer">
-      <div class="shield-layer-num">07</div>
-      <div class="shield-layer-label"><div class="shield-layer-label-inner">3× Redundancy Reserve</div></div>
-      <div class="shield-layer-body">
-        The Credit Holder maintains <strong>triple redundancy reserves</strong> — meaning it holds
-        more verified carbon credits than it transfers in any given transaction.
-        If any portion of the transferred credits were challenged, replacement credits
-        of equivalent type and vintage are available. Alternatively, the buyer receives
-        a <strong>full refund</strong>. This reserve structure means a successful IRS challenge
-        does not result in buyer loss — it results in replacement or return of funds.
+
+    <div class="layer-item">
+      <div class="layer-numeral">VII</div>
+      <div class="layer-body">
+        <div class="layer-rule"></div>
+        <div class="layer-cat">Reserve Architecture</div>
+        <div class="layer-h3">Triple Redundancy Reserve &mdash; Replace or Refund</div>
+        <div class="layer-text">The Credit Holder maintains <strong>triple redundancy reserves</strong>: verified carbon credits held in excess of the face value of credits transferred in any transaction. If any portion of transferred credits were successfully challenged &mdash; the remote scenario after Layers I through VI have held &mdash; replacement credits of equivalent type and vintage are available immediately. If replacement credits are not available within the contracted timeframe, the buyer receives a <strong>full refund</strong> of all amounts paid. This final layer means that even a complete IRS success in challenging the credits does not result in buyer economic loss. The buyer&rsquo;s downside is the cost of capital during the resolution period, not the loss of the benefit itself.</div>
       </div>
     </div>
+
   </div>
 
-  <div class="shield-summary">
-    <div class="shield-sum-cell">
-      <div class="shield-sum-tag">IRS Position</div>
-      <div class="shield-sum-title">These Credits Are Not a Tax Shelter</div>
-      <div class="shield-sum-body">
-        §45Q credits purchased via §6418 are a <em>direct federal tax credit transfer</em> —
-        expressly authorized by Congress. They are not listed transactions, not abusive
-        tax shelters, and not subject to the economic substance doctrine. The IRS has
-        acknowledged §6418 transfers as valid in published guidance.
-      </div>
+  <div class="layers-summary">
+    <div class="ls-cell accent">
+      <div class="ls-tag">IRS Position</div>
+      <div class="ls-title">These Credits Are Not a Listed Transaction or Tax Shelter</div>
+      <div class="ls-body">&sect;45Q credits transferred via &sect;6418 are a direct federal tax credit transfer expressly authorized by Congress. They are not listed transactions, not abusive tax shelters, and not subject to the economic substance doctrine. The IRS has acknowledged &sect;6418 transfers as valid in Treasury guidance and Notices issued following the Inflation Reduction Act.</div>
     </div>
-    <div class="shield-sum-cell">
-      <div class="shield-sum-tag">Buyer's CPA Role</div>
-      <div class="shield-sum-title">The Transfer Is Reported on the Buyer's Return</div>
-      <div class="shield-sum-body">
-        The buyer's CPA reports the §6418 transfer election on the buyer's federal income
-        tax return using Form 3800 (General Business Credit). The IRS pre-filing
-        registration number from the Credit Holder is disclosed on that return.
-        It is a transparent, fully disclosed transaction — no hidden structures,
-        no opinion letters required, no basis positions to defend.
-      </div>
+    <div class="ls-cell">
+      <div class="ls-tag">CPA Reporting</div>
+      <div class="ls-title">Fully Transparent &mdash; Reported on Form 3800, No Opinion Required</div>
+      <div class="ls-body">The buyer&rsquo;s CPA reports the &sect;6418 transfer election on the federal income tax return using Form 3800 (General Business Credit). The IRS pre-filing registration number is disclosed directly on the return. No opinion letter, no basis disclosure statement, no listed transaction form. The structure is fully transparent to the IRS by design.</div>
     </div>
-    <div class="shield-sum-cell">
-      <div class="shield-sum-tag">Full Audit Cooperation</div>
-      <div class="shield-sum-title">Credit Holder Cooperates Fully with Any IRS Exam</div>
-      <div class="shield-sum-body">
-        If the IRS examines the buyer's return and questions the §45Q credits,
-        the Credit Holder commits to full cooperation — providing MRV reports,
-        audit results, IRS registration records, physical sampling data, and
-        any other documentation requested. The buyer is not left to defend
-        the credit alone.
-      </div>
+    <div class="ls-cell">
+      <div class="ls-tag">Audit Cooperation</div>
+      <div class="ls-title">Credit Holder Cooperates Fully With Any IRS Examination</div>
+      <div class="ls-body">If the IRS examines the buyer&rsquo;s return and inquires about the &sect;45Q credits, the Credit Holder provides full cooperation: MRV reports, audit results, IRS registration records, physical sampling data, expert declarations, and any other documentation required. The buyer is not left to independently defend a credit originating from the Credit Holder&rsquo;s project.</div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<section class="section">
+  <div class="section-eyebrow">Process</div>
+  <div class="section-title">Steps for Qualified Buyers</div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">Step 01 &mdash; Qualification</div>
+      <div class="step-title">Confirm federal tax capacity and execute NDA</div>
+      <div class="step-body">Buyer confirms with their CPA that 2025 federal income tax liability is sufficient to utilize credits. NDA executed to receive full Credit Holder documentation, MPA summary, and IRS registration confirmation.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">Step 02 &mdash; Due Diligence</div>
+      <div class="step-title">Four-day review period with full back-up documentation</div>
+      <div class="step-body">Buyer receives redacted MPA, Credit Holder identity, IRS pre-filing registration number, third-party MRV reports, and annual audit summaries. Full termination right with escrow return if buyer is unsatisfied for any reason.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">Step 03 &mdash; Close</div>
+      <div class="step-title">Fund, receive Purchase Right, apply credits to return</div>
+      <div class="step-body">$4.5M assignment fee wired to Welcome 123 1 LLC. $21M wired directly to Credit Holder. Purchase Right assigned. &sect;6418 transfer election processed between buyer and Credit Holder. Credits applied on the 2025 federal return.</div>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="footer-entity">Welcome 123 1 LLC</div>
-  <div class="footer-disclaimer">
-    This document is confidential and intended solely for use by qualified financial advisors,
-    CPAs, and institutional investors evaluating this transaction on behalf of clients. It does not
-    constitute an offer to sell or a solicitation to buy any security. Welcome 123 1 LLC is not a
-    broker-dealer, investment adviser, or tax adviser. Welcome 123 1 LLC does not sell, transfer,
-    broker, or allocate any tax credit. Welcome 123 1 LLC is assigning a contractual purchase right
-    only. Buyers are strongly encouraged to consult their own legal counsel, CPA, and tax advisors
-    prior to executing the Credit Purchase Right Assignment Agreement. Tax credits and their
-    availability, transferability, and usability are subject to buyer's specific tax position,
-    federal law, and IRS interpretation. Welcome 123 1 LLC makes no representation or warranty
-    regarding the Section 45Q credits, the Credit Holder, or any buyer's ability to utilize the
-    credits. For educational and discussion purposes only. Not an offering document.
-    &nbsp;&bull;&nbsp; IRC §45Q &bull; IRC §6418 &bull; IRA 2022
+  <div class="footer-disc">
+    This document is confidential and intended solely for qualified financial advisors, CPAs, and institutional investors evaluating this transaction on behalf of clients.
+    It does not constitute an offer to sell or a solicitation to buy any security. Welcome 123 1 LLC is not a broker-dealer, investment adviser, or tax adviser and does not
+    sell, transfer, broker, or allocate any tax credit. Welcome 123 1 LLC assigns a contractual purchase right only. Buyers should consult independent legal counsel,
+    a qualified CPA, and tax advisors before executing the Credit Purchase Right Assignment Agreement. Tax credit availability, transferability, and usability depend on
+    the buyer&rsquo;s specific tax position, applicable federal law, and IRS interpretation. Welcome 123 1 LLC makes no representation regarding the Credits, the Credit Holder,
+    or the buyer&rsquo;s ability to utilize the Credits. For discussion purposes only. Not an offering document. &nbsp;&bull;&nbsp; IRC &sect;45Q &bull; IRC &sect;6418 &bull; IRA 2022
   </div>
 </footer>
 
