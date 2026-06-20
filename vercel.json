@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "welcome123-45q",
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
