@@ -124,7 +124,8 @@ body{background:var(--ink);color:var(--cream);font-family:var(--sans);-webkit-fo
 .layer-item:last-child{border-bottom:1px solid var(--bdr-s);}
 .layer-numeral{font-family:var(--serif);font-size:58px;font-weight:700;color:var(--gold);opacity:0.30;line-height:1;letter-spacing:-0.02em;user-select:none;}
 .layer-body{padding-left:36px;border-left:1px solid var(--bdr-s);}
-.layer-rule{width:30px;height:1.5px;background:var(--gold);margin-bottom:13px;}
+.layer-rule{width:0;height:1.5px;background:var(--gold);margin-bottom:13px;transition:width 0.55s cubic-bezier(0.22,1,0.36,1);}
+.layer-rule.draw{width:30px;}
 .layer-cat{font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-l);margin-bottom:11px;}
 .layer-h3{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--cream);line-height:1.32;margin-bottom:14px;}
 .layer-text{font-size:15px;line-height:1.82;color:var(--c70);}
@@ -139,6 +140,46 @@ body{background:var(--ink);color:var(--cream);font-family:var(--sans);-webkit-fo
 .footer{padding:44px 64px;border-top:1px solid var(--bdr);}
 .footer-entity{font-family:var(--serif);font-size:14px;font-style:italic;color:var(--c70);margin-bottom:10px;}
 .footer-disc{font-size:11px;line-height:1.72;color:var(--c45);max-width:920px;}
+
+/* PROGRESS BAR */
+#progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--gold);width:0%;z-index:999;transition:width 0.1s linear;border-radius:0 2px 2px 0;}
+
+/* FADE-UP REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.65s cubic-bezier(0.22,1,0.36,1),transform 0.65s cubic-bezier(0.22,1,0.36,1);}
+.reveal.visible{opacity:1;transform:none;}
+
+/* COUNT-UP metrics — hide the text until JS fills it */
+.metric-val[data-count]{opacity:0;transition:opacity 0.3s ease;}
+.metric-val[data-count].counted{opacity:1;}
+
+/* hero metrics pop */
+.metric-cell{background:var(--card);padding:28px 24px;border-top:2px solid var(--gold-w);transition:border-top-color 0.4s ease,box-shadow 0.4s ease;}
+.metric-cell.accent{border-top-color:var(--gold);}
+.metric-cell.popped{box-shadow:0 4px 24px rgba(154,120,20,0.10);}
+
+/* savings table row cascade */
+.savings-table tbody tr{opacity:0;transform:translateX(-10px);transition:opacity 0.4s ease,transform 0.4s ease;}
+.savings-table tbody tr.row-in{opacity:1;transform:none;}
+
+/* step / protection / legal card entrance */
+.step-card,.protection-card,.legal-card,.flow-step,.ls-cell{opacity:0;transform:translateY(18px);transition:opacity 0.5s ease,transform 0.5s ease;}
+.step-card.in,.protection-card.in,.legal-card.in,.flow-step.in,.ls-cell.in{opacity:1;transform:none;}
+
+/* layer item slide */
+.layer-item{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.layer-item.in{opacity:1;transform:none;}
+
+/* gold border pulse on callout */
+@keyframes pulse-border{0%,100%{border-left-color:var(--gold);}50%{border-left-color:var(--gold-l);}}
+.callout{animation:pulse-border 3.5s ease-in-out infinite;}
+
+/* metric value shimmer on count */
+@keyframes shimmer{0%{color:var(--gold);}100%{color:var(--cream);}}
+.metric-val.shimmer{animation:shimmer 0.8s ease forwards;}
+
+/* footer entity fade */
+.footer-entity{opacity:0;transform:translateY(10px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.footer-entity.in{opacity:1;transform:none;}
 
 @media(max-width:900px){
   .site-header,.hero,.section,.footer{padding-left:24px;padding-right:24px;}
@@ -156,6 +197,7 @@ body{background:var(--ink);color:var(--cream);font-family:var(--sans);-webkit-fo
 </style>
 </head>
 <body>
+<div id="progress-bar"></div>
 
 <header class="site-header">
   <div>
@@ -177,19 +219,19 @@ body{background:var(--ink);color:var(--cream);font-family:var(--sans);-webkit-fo
   </p>
   <div class="hero-metrics">
     <div class="metric-cell accent">
-      <div class="metric-val">$30M</div>
+      <div class="metric-val" data-count="30" data-prefix="$" data-suffix="M">$30M</div>
       <div class="metric-label">Face Value<br>Section 45Q Credits</div>
     </div>
     <div class="metric-cell">
-      <div class="metric-val">$0.85</div>
+      <div class="metric-val" data-count="0.85" data-prefix="$" data-suffix="" data-decimals="2">$0.85</div>
       <div class="metric-label">Effective Cost Per<br>Dollar of Credit</div>
     </div>
     <div class="metric-cell">
-      <div class="metric-val grn">$4.5M</div>
+      <div class="metric-val grn" data-count="4.5" data-prefix="$" data-suffix="M">$4.5M</div>
       <div class="metric-label">Net Economic<br>Benefit to Buyer</div>
     </div>
     <div class="metric-cell">
-      <div class="metric-val">2025</div>
+      <div class="metric-val" data-count="2025" data-prefix="" data-suffix="">2025</div>
       <div class="metric-label">Credit Vintage<br>Tax Year Eligible</div>
     </div>
   </div>
@@ -540,5 +582,160 @@ body{background:var(--ink);color:var(--cream);font-family:var(--sans);-webkit-fo
   </div>
 </footer>
 
+<script>
+(function(){
+
+/* ---------- SCROLL PROGRESS BAR ---------- */
+const bar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  bar.style.width = pct + '%';
+}, {passive:true});
+
+/* ---------- EASING ---------- */
+function easeOutExpo(t){ return t===1 ? 1 : 1 - Math.pow(2, -10*t); }
+function easeOutQuart(t){ return 1-(--t)*t*t*t; }
+
+/* ---------- COUNT-UP ---------- */
+function countUp(el){
+  const target = parseFloat(el.dataset.count);
+  const prefix = el.dataset.prefix || '';
+  const suffix = el.dataset.suffix || '';
+  const decimals = parseInt(el.dataset.decimals||'0');
+  const duration = target >= 1000 ? 2200 : 1400;
+  const start = Date.now();
+  // For 2025 start near the end so it feels snappy
+  const startVal = target >= 1000 ? target - 8 : 0;
+  el.classList.add('counted');
+  function tick(){
+    const elapsed = Date.now() - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeOutExpo(progress);
+    const current = startVal + (target - startVal) * eased;
+    el.textContent = prefix + current.toFixed(decimals) + suffix;
+    if(progress < 1) requestAnimationFrame(tick);
+    else {
+      el.textContent = prefix + target.toFixed(decimals) + suffix;
+      el.classList.add('shimmer');
+    }
+  }
+  requestAnimationFrame(tick);
+}
+
+/* ---------- INTERSECTION OBSERVER FACTORY ---------- */
+function makeObserver(className, onEnter, opts){
+  return new IntersectionObserver((entries, obs) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){ onEnter(e.target, obs); }
+    });
+  }, opts || {threshold: 0.15});
+}
+
+/* ---------- METRIC COUNT-UP (fires when hero scrolls in) ---------- */
+const metricObs = makeObserver('metrics', (el, obs) => {
+  obs.unobserve(el);
+  const metrics = el.querySelectorAll('.metric-val[data-count]');
+  metrics.forEach((m, i) => {
+    setTimeout(() => countUp(m), i * 180);
+    m.closest('.metric-cell').classList.add('popped');
+  });
+}, {threshold: 0.3});
+const metricsGrid = document.querySelector('.hero-metrics');
+if(metricsGrid) metricObs.observe(metricsGrid);
+
+/* ---------- GENERIC STAGGERED CARDS ---------- */
+function staggerObserve(selector, cls, baseDelay){
+  const obs = makeObserver(selector, (el, o) => {
+    o.unobserve(el);
+    const items = el.querySelectorAll('.' + selector.replace('.',''));
+    items.forEach((item, i) => {
+      setTimeout(() => item.classList.add(cls), baseDelay + i * 110);
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll(selector).forEach(g => obs.observe(g));
+}
+
+// observe grids as containers
+const cardTargets = [
+  ['.steps-grid',       'step-card',       'in', 0],
+  ['.flow-steps',       'flow-step',       'in', 0],
+  ['.protections-grid', 'protection-card', 'in', 0],
+  ['.legal-grid',       'legal-card',      'in', 0],
+  ['.layers-summary',   'ls-cell',         'in', 0],
+];
+cardTargets.forEach(([wrapper, childCls, inCls, delay]) => {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(!e.isIntersecting) return;
+      obs.unobserve(e.target);
+      e.target.querySelectorAll('.'+childCls).forEach((el,i) => {
+        setTimeout(() => el.classList.add(inCls), delay + i*100);
+      });
+    });
+  }, {threshold:0.10});
+  document.querySelectorAll(wrapper).forEach(el => obs.observe(el));
+});
+
+/* ---------- LAYER ITEMS (each individually) ---------- */
+const layerObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(!e.isIntersecting) return;
+    layerObs.unobserve(e.target);
+    e.target.classList.add('in');
+    // draw the rule line
+    const rule = e.target.querySelector('.layer-rule');
+    if(rule) setTimeout(() => rule.classList.add('draw'), 100);
+  });
+}, {threshold: 0.20});
+document.querySelectorAll('.layer-item').forEach(el => layerObs.observe(el));
+
+/* ---------- SAVINGS TABLE ROW CASCADE ---------- */
+const tableObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(!e.isIntersecting) return;
+    tableObs.unobserve(e.target);
+    e.target.querySelectorAll('tbody tr').forEach((row, i) => {
+      setTimeout(() => row.classList.add('row-in'), i * 80);
+    });
+  });
+}, {threshold: 0.15});
+const savingsTable = document.querySelector('.savings-table');
+if(savingsTable) tableObs.observe(savingsTable);
+
+/* ---------- GENERIC REVEAL (section titles etc) ---------- */
+document.querySelectorAll('.section-title,.callout,.vintage-banner,.section-eyebrow').forEach(el => {
+  el.classList.add('reveal');
+});
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, {threshold: 0.15});
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+/* ---------- FOOTER ---------- */
+const footerObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.querySelector('.footer-entity')?.classList.add('in');
+      footerObs.unobserve(e.target);
+    }
+  });
+}, {threshold:0.3});
+const footer = document.querySelector('.footer');
+if(footer) footerObs.observe(footer);
+
+/* ---------- HEADER SHADOW ON SCROLL ---------- */
+const header = document.querySelector('.site-header');
+window.addEventListener('scroll', () => {
+  header.style.boxShadow = window.scrollY > 10 ? '0 1px 20px rgba(154,120,20,0.08)' : '';
+}, {passive:true});
+
+})();
+</script>
 </body>
 </html>
