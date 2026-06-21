@@ -627,39 +627,32 @@ function countUp(el){
 }
 
 /* ---------- INTERSECTION OBSERVER FACTORY ---------- */
-function makeObserver(className, onEnter, opts){
-  return new IntersectionObserver((entries, obs) => {
+function makeObserver(onEnter, onLeave, opts){
+  return new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if(e.isIntersecting){ onEnter(e.target, obs); }
+      if(e.isIntersecting){ onEnter(e.target); }
+      else if(onLeave){ onLeave(e.target); }
     });
   }, opts || {threshold: 0.15});
 }
 
 /* ---------- METRIC COUNT-UP (fires when hero scrolls in) ---------- */
-const metricObs = makeObserver('metrics', (el, obs) => {
-  obs.unobserve(el);
-  const metrics = el.querySelectorAll('.metric-val[data-count]');
-  metrics.forEach((m, i) => {
-    setTimeout(() => countUp(m), i * 180);
-    m.closest('.metric-cell').classList.add('popped');
-  });
-}, {threshold: 0.3});
+const metricObs = makeObserver(
+  (el) => {
+    el.querySelectorAll('.metric-val[data-count]').forEach((m, i) => {
+      setTimeout(() => countUp(m), i * 180);
+      m.closest('.metric-cell').classList.add('popped');
+    });
+  },
+  (el) => {
+    el.querySelectorAll('.metric-cell').forEach(c => c.classList.remove('popped'));
+  },
+  {threshold: 0.3}
+);
 const metricsGrid = document.querySelector('.hero-metrics');
 if(metricsGrid) metricObs.observe(metricsGrid);
 
-/* ---------- GENERIC STAGGERED CARDS ---------- */
-function staggerObserve(selector, cls, baseDelay){
-  const obs = makeObserver(selector, (el, o) => {
-    o.unobserve(el);
-    const items = el.querySelectorAll('.' + selector.replace('.',''));
-    items.forEach((item, i) => {
-      setTimeout(() => item.classList.add(cls), baseDelay + i * 110);
-    });
-  }, {threshold: 0.12});
-  document.querySelectorAll(selector).forEach(g => obs.observe(g));
-}
-
-// observe grids as containers
+// observe grids as containers — re-animate cards every time the grid scrolls in/out
 const cardTargets = [
   ['.steps-grid',       'step-card',       'in', 0],
   ['.flow-steps',       'flow-step',       'in', 0],
@@ -668,41 +661,48 @@ const cardTargets = [
   ['.layers-summary',   'ls-cell',         'in', 0],
 ];
 cardTargets.forEach(([wrapper, childCls, inCls, delay]) => {
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if(!e.isIntersecting) return;
-      obs.unobserve(e.target);
-      e.target.querySelectorAll('.'+childCls).forEach((el,i) => {
-        setTimeout(() => el.classList.add(inCls), delay + i*100);
+  const obs = makeObserver(
+    (el) => {
+      el.querySelectorAll('.'+childCls).forEach((item,i) => {
+        setTimeout(() => item.classList.add(inCls), delay + i*100);
       });
-    });
-  }, {threshold:0.10});
+    },
+    (el) => {
+      el.querySelectorAll('.'+childCls).forEach(item => item.classList.remove(inCls));
+    },
+    {threshold:0.10}
+  );
   document.querySelectorAll(wrapper).forEach(el => obs.observe(el));
 });
 
 /* ---------- LAYER ITEMS (each individually) ---------- */
-const layerObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if(!e.isIntersecting) return;
-    layerObs.unobserve(e.target);
-    e.target.classList.add('in');
-    // draw the rule line
-    const rule = e.target.querySelector('.layer-rule');
+const layerObs = makeObserver(
+  (el) => {
+    el.classList.add('in');
+    const rule = el.querySelector('.layer-rule');
     if(rule) setTimeout(() => rule.classList.add('draw'), 100);
-  });
-}, {threshold: 0.20});
+  },
+  (el) => {
+    el.classList.remove('in');
+    const rule = el.querySelector('.layer-rule');
+    if(rule) rule.classList.remove('draw');
+  },
+  {threshold: 0.20}
+);
 document.querySelectorAll('.layer-item').forEach(el => layerObs.observe(el));
 
 /* ---------- SAVINGS TABLE ROW CASCADE ---------- */
-const tableObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if(!e.isIntersecting) return;
-    tableObs.unobserve(e.target);
-    e.target.querySelectorAll('tbody tr').forEach((row, i) => {
+const tableObs = makeObserver(
+  (el) => {
+    el.querySelectorAll('tbody tr').forEach((row, i) => {
       setTimeout(() => row.classList.add('row-in'), i * 80);
     });
-  });
-}, {threshold: 0.15});
+  },
+  (el) => {
+    el.querySelectorAll('tbody tr').forEach(row => row.classList.remove('row-in'));
+  },
+  {threshold: 0.15}
+);
 const savingsTable = document.querySelector('.savings-table');
 if(savingsTable) tableObs.observe(savingsTable);
 
@@ -710,25 +710,19 @@ if(savingsTable) tableObs.observe(savingsTable);
 document.querySelectorAll('.section-title,.callout,.vintage-banner,.section-eyebrow').forEach(el => {
   el.classList.add('reveal');
 });
-const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if(e.isIntersecting){
-      e.target.classList.add('visible');
-      revealObs.unobserve(e.target);
-    }
-  });
-}, {threshold: 0.15});
+const revealObs = makeObserver(
+  (el) => el.classList.add('visible'),
+  (el) => el.classList.remove('visible'),
+  {threshold: 0.15}
+);
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
 /* ---------- FOOTER ---------- */
-const footerObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if(e.isIntersecting){
-      e.target.querySelector('.footer-entity')?.classList.add('in');
-      footerObs.unobserve(e.target);
-    }
-  });
-}, {threshold:0.3});
+const footerObs = makeObserver(
+  (el) => el.querySelector('.footer-entity')?.classList.add('in'),
+  (el) => el.querySelector('.footer-entity')?.classList.remove('in'),
+  {threshold:0.3}
+);
 const footer = document.querySelector('.footer');
 if(footer) footerObs.observe(footer);
 
